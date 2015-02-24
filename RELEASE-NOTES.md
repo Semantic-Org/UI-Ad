@@ -1,5 +1,14 @@
+### Version 1.10.0 - February 23, 2015
+
+- **Form Validation** - Adds `containsExactly`, `notExactly`, `isExactly` case sensitive validation rules, make `contains`, `not`, `is` case insensitive.
+- **API** - Added `was cancelled` to determine whether request was cancelled by `beforeSend`
+- **Image* - Added `hidden image` state
+- **Composer** - Composer.json should now read version from tags, adjusted some fields.
+- **Grid** - Stackable grid now has horizontal padding by default on mobile unless nested inside a `ui grid` or `ui segment` (not vertical)
+
 ### Version 1.9.3 - February 20, 2015
 
+- **RTL** - Fixes `rtl` tasks not running correctly on `gulp build` due to name typo, `build rtl` instead of `build-rtl`
 - **Tab** - Fixed bug when loading `remote` content with `tab` where current tab would not hide while another tab is loading
 - **Tab** - Added new tab remote content example with stubbed AJAX using SinonJS
 
