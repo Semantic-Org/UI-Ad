@@ -1,3 +1,17 @@
+### Version 1.11.0 - March 3, 2015
+
+- **Visibiliity** - Attach callbacks to elements visibility conditions like `top visible` `bottom visible`, `passing`. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.
+- **Transition** - Added more reasonable default durations for each animation
+- **Loader** - `inline loader` now has a `centered` variation
+- **Popup** - Added `exclusive` parameter to automatically close other popups on open
+- **Transition** - Added `toggle` behavior and docs for `show` and `hide`
+- **Dimmer** - Add `opacity` setting to override css value. Add to docs several undocumented settings, like `useCSS`, and `variation`.
+- **Icon** - added `@src` variable to make it adjustable with themes that dont support all types like `woff2`
+- **Sticky** - Fixed sticky position when page loads and content is below sticky content.
+- **Sticky** - Fix bottom attached position not adjusting for bottom padding on container element
+- **Form** - Added `input[type="search"]` styles to `ui form`
+- **Transition** - Adds examples of `hide, `show`, `toggle`, `stop`, `stop all`, and `clear queue`
+
 ### Version 1.10.0 - February 23, 2015
 
 - **Form Validation** - Adds `containsExactly`, `notExactly`, `isExactly` case sensitive validation rules, make `contains`, `not`, `is` case insensitive.
