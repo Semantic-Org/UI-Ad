@@ -1,3 +1,15 @@
+### Version 1.11.2 - March 6, 2015
+
+- **Accordion** - Accordion can now specify a trigger element instead of `title`, added an [example in docs](http://www.semantic-ui.com/modules/accordion.html#changing-trigger)
+- **Header** - Labels inside headers have been slightly increased in size
+- **Modal** - Fixes modal `buttons` on mobile devices to not have extra bottom padding.
+- **Card/Dimmer** - Fix dimmer z-index being too high when inside a `ui card`. Added variable for specifying default dimmer color inside card.
+- **Dropdown** - Fix issue in `setup reference` (added in `1.11.1`) where chaining would not return `ui dropdown` immediately after initialization
+
+### Version 1.11.1 - March 5, 2015
+
+- **Dropdown** - Added select styles for elements before they are initialized instead of FOIC (Flash of invisible content)
+
 ### Version 1.11.0 - March 3, 2015
 
 - **Visibiliity** - Attach callbacks to elements visibility conditions like `top visible` `bottom visible`, `passing`. Useful for things like: image lazy loading, infinite scroll content, and recording tracking metrics.
