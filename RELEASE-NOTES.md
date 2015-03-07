@@ -1,3 +1,7 @@
+### Version 1.11.3 - March 6, 2015
+
+- **Grid** - Fixed `right/left/center aligned` to adjust `align-items` in flex containers like `equal height/width`
+
 ### Version 1.11.2 - March 6, 2015
 
 - **Accordion** - Accordion can now specify a trigger element instead of `title`, added an [example in docs](http://www.semantic-ui.com/modules/accordion.html#changing-trigger)
