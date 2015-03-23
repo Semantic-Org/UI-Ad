@@ -1,3 +1,9 @@
+### Version 1.11.5 - March 23, 2015
+
+- **Build Tools** - Adjusting site.variables will now rebuild all UI, instead of just site.less
+- **Dropdown** - Fix bug where element will not blur on tab key when search selection and no selection made
+- **Dropdown** - Dropdown `focus` color has been adjusted to match forms more closely
+
 ### Version 1.11.3-4 - March 6, 2015
 
 - **Grid** - Added opt-in `stretched` variation for `equal height` instead of forcing `flex` on all `equal height columns` which may cause layout issues due to changes in rendering with `flexbox`.
