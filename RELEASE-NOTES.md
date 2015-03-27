@@ -1,3 +1,8 @@
+### Version 1.11.6 - March 27, 2015
+
+- **Menu/Dropdown** - Fix dropdown headers disappearing inside menus
+- **LESS Repo** - Add missing `semantic.less` file to less repo for importing components
+
 ### Version 1.11.5 - March 23, 2015
 
 - **Build Tools** - Adjusting site.variables will now rebuild all UI, instead of just site.less
