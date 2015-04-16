@@ -1,3 +1,10 @@
+### Version 1.12.0 - April 13, 2015
+
+- **Visibility** - Adds updated visibility module from `2.x` channel. Visibility will automatically refresh by default after images load on page refresh. Fixes issues with element positions after image loading.
+- **Sticky** - Adds sticky module from `2.x` branch. Sticky elements now use pub/sub with drastically improved performance. Sticky elements that do not fit on page will now scroll at the same speed as the page is scrolled instead of slower.
+- **Popup** - Popup no longer produces a console error when it cannot find an adequate position in the browser viewport.
+- **Visibility** - Fixed issue where `precache` behavior was missing from visibility causing `image` lazy loading to fail
+
 ### Version 1.11.6 - March 27, 2015
 
 - **Menu/Dropdown** - Fix dropdown headers disappearing inside menus
