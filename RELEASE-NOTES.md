@@ -1,3 +1,7 @@
+### Version 1.12.1 - April 26, 2015
+
+- **Input** - Fixes labeled inputs not adjusting correctly with flex. **Backported from 2.0**
+
 ### Version 1.12.0 - April 13, 2015
 
 - **Visibility** - Adds updated visibility module from `2.x` channel. Visibility will automatically refresh by default after images load on page refresh. Fixes issues with element positions after image loading.
