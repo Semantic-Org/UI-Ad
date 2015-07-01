@@ -2,7 +2,7 @@
 Package.describe({
   name    : 'semantic:ui-ad',
   summary : 'Semantic UI - Ad: Single component release',
-  version : '1.12.3',
+  version : '2.0.0',
   git     : 'git://github.com/Semantic-Org/UI-Ad.git',
 });
 

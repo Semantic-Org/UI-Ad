@@ -1,3 +1,127 @@
+### Version 2.0.0 - June 30, 2015
+
+- **Grid** - `page grid` has been deprecated.  `page grids` used percentage gutters which made it unnecessarily difficult to style responsive page content. Moving forward we recommend using `ui container` a fixed width responsive container for holding page contents.
+- **Form** - `grouped inline field` no longer display horizontally. Use `inline field` instead for horizontal inline field groups.
+- **Popup** - Popups are no longer exclusive by default. Opening a popup will not necessarily close other visible popups. You can change this behavior by using the setting `exclusive: true`. Additionally the default theme now uses `1rem` size for standard popups.
+- **Colors** - Default colors have been adjusted, which may cause slight changes in your design. New colors have also been added to fill in missing gaps in [color naming](http://en.wikipedia.org/wiki/Linguistic_relativity_and_the_color_naming_debate#Berlin_and_Kay).
+- **Rail** - Rail now uses `border-box` instead of `content-box`. This means manually specified rail widths will now need to account for padding. This was added to fix issues where rail `height: 100%` would incorrectly match content when a rail had padding.
+- **Tab** - `onTabInit` and `onTabLoad` have been renamed to `onFirstLoad` and `onLoad` respectively. This is to conform to the naming conventions of other modules (no self reference). Previous callbacks will continue to work but will produce deprecation notices in console. Two new callbacks `onVisible` and `onRequest` have been added as well.
+- **Button** - `wide` variations using numbers `2 wide`, `3 wide` have been removed due to incompatibilities with some build tools. Please use `two wide`, or `three wide` instead.
+- **Video** - The undocumented `video` module has been renamed to `embed`. Behaviors remain the same, but users need to adjust their javascript init to `$('.ui.embed').embed();`
+- **Multiselect** - New `multiple` dropdown types have been added. Many new dropdown improvements have been added including tagging/tokenizing features and loading data through API requests.
+- **Embed** - New embed component allows for responsive iframe embeds that maintain their aspect ratio. Embed can be used with YouTube or Vimeo videos, along with placeholder content to avoid loading third party libraries until a user chooses to interact with the video.
+
+**Major Enhancements (Please Read)**
+- **Site** - Added new colors `olive`, `violet`, `brown` and `grey`. These are available in all elements with color variations.  **Thanks @lemartialou**
+- **API** - API can now be used with mocked responses, and custom AJAX requests. `mockResponse` has been added to resolve request with a prespecified JSON object, or a synchronous function callback.
+- **API** `mockResponseAsync` has been added for custom asynchronous requests. This allows you to specify a custom async callback to resolve an API request, helping with integration with libraries like Ember or Angular that may wrap AJAX requests.
+- **API** - API callbacks now have an `onResponse` callback that can adjust a servers response before it is parsed by other callbacks for success or failure conditions. **Thanks @mnquintana**
+- **Checkbox** - Added support for `indeterminate` checkboxes, along with new stylings.
+- **Dropdown** - Added remote API integration with dropdown, to allow `search selection` to query against a remote dataset.
+- **Dropdown** - Dropdowns now automatically observe changes in `menu` and will update selector cache with new additions
+- **Dropdowns** - Added ability to add custom choices to all search selection dropdowns (multi/single) using `allowAdditions: true` setting. Search now displays error messages on no results in all cases.
+- **Dropdown** - Keyboard shortcuts have been added for selecting dropdown choices, for example "N" will scroll to "New York" in a state selection list, similar to native `<select>` behavior.
+- **Dropdown** - Added new dropdown variation `scrolling dropdown` and `scrolling menu`, this can be used to include a scrollable section inside a dropdown menu.
+- **Grid** - Grids now use `flexbox`, columns are now all equal height by default. New flexbox alignment types like `stretch` have been added for easier vertical alignment.
+- **Modal** - Added new settings `blurring` and `inverted` which automatically set a modal's dimmer to either inverted or blurring.
+- **Menu** - Menu now uses flexbox. This allows menu items to match each others heights regardless of each items content size. `right menu` content should now follow other menu content instead of preceding it (no longer uses float).
+- **Menu** - `vertical tabular menu`, a vertical tab menu, has been added
+- **Shapes** - Shapes now correctly adjusts for margin on `sides`
+- **Visibility** - Using `.visibility({ type: 'fixed'})` will now automatically add a placeholder element which will swap places with an element when it is attached to the viewport. This should make fixed content drastically simpler.
+- **Visibility** - Added two new visibility callbacks `onOnScreen` and `onOffScreen`, which occur, most obviously when an element first appears in or out of a browser's viewport.
+- **Site** - Added many new site variables, including the ability to control input size across all UI `inputPadding`, along with more border colors, accents, and colors.
+- **Accordion** - adds `onOpening` and `onClosing` callback (before animation) to go with `onOpen`, `onClose` (after animation) **Thanks @cluppric**
+- **Accordion** - Added `on` setting for specifying accordion trigger event.
+- **Build Tools** - Adjusting `site.variables` will now rebuild all UI, instead of just `site.less`
+- **Button** - Added `:focus` styles for all button types, all button examples in docs now are keyboard focusable using either `<button>` or `tabindex` where appropriate.
+- **Checkbox** - Checkbox will now gracefully correct behaviors invoked on the child input element instead of the `ui checkbox`.
+- **Divider** - `vertical divider` inside `ui grid` now accounts for column padding
+- **Dropdown** - Added `showOnFocus` option that lets you specify whether dropdown menu should show on focus
+- **Dropdown** - Added `disabled item` state, disabled items will automatically be skipped with keyboard selection
+- **Form** - Added a host of new styles for form fields autocompleted by your browser, including autocompleted error, and focus states
+- **Form** - Added placeholder color rules for IE, `ms-input-placeholder`
+- **Form** - Adds form `success` state
+- **Form Validation** - Added `is valid` behavior, returns `true/false` if form is valid
+- **Form Validation** - Added `different[field]` rule which requires a field to be different than another field
+- **Grid** - Added `large screen only` and `widescreen only` responsive variations for grid.
+- **Grid** - `celled` and `internally celled` grid now use flexbox instead of `display: table;`
+- **Headers** - Added new header type `sub header`, useful for displaying small headers alongside text content. See examples [in the header docs](http://www.semantic-ui.com/elements/header.html#sub-headers)
+- **Image** - Images now include a `spaced` variation for adding whitespace around images when used inline with text.
+- **Input** - Added placeholder color rules for IE, `ms-input-placeholder`
+- **Menu** - Add examples/documentation for `fixed menu`
+- **Menu** - Added `stackable` menu variation for simple responsive menus
+- **Menu** - Added many new variables to menu
+- **Menu** - Menus items are now slightly more padded
+- **Menu** - The hover/active state of `dropdown item` have been adjusted to match `item`. Dropdown styles can be themed specifically inside `menu`.
+- **Modal** - Modal now uses an adjusted `scale in` transition in the default theme, that should be more subtle and work better with long modal content.
+- **Modal** - Modal `onApprove` and `onDeny` now receive the activating element as the first parameter. Added documentation about using `return false` to avoid hiding element on click.
+- **Popup** - Added more size variations for popup `mini`, `tiny`
+- **Reveal** - Added new `active` state that allows you to show `reveal` programatically
+- **Segment** - Added `padded` and `very padded` segment variations
+- **Search** - Search will now automatically add class `category` when using `type: category`.
+- **Segment** - Added `clearing` segment for cases that need a [clearfix](http://learnlayout.com/clearfix.html).
+- **Sidebar** - Improved animation performance through performance debugging. Sidebar now caches, width, height, rtl direction on load.
+- **Site** - Added in `pageOverflowX` variable, default theme hides horizontal scrollbars on `body`
+- **Site** - Added default `focus` colors for all color variations
+- **Site** - All floating/raised variations now inherit from a global `@floatedShadow` making theming easier
+- **Statistic** - Added new evenly divided group variation, for example `three statistics` shows 3 per row
+- **Steps** - Added `attached` steps, which can now be attached to other UI like `segment`
+- **Tabs** - Added new callbacks `onTabVisible` and `onRequest`
+- **Tabs** - Added `parseScripts` option, defaults to `once` parsing inline scripts only first load
+- **Table** - Adds `selectable table` variation, which shows hover effect on row when hovering
+- **Table** - Added `vertical alignment` variations to `ui table`
+- **Table** - Added `single line` table variation which prevents text from wrapping
+- **Transition** - Adjusting `style` or `class` during a transition, will no longer reset the change after transition completes.
+- **Visibility/Sticky** - Visibility and sticky now refresh automatically after page content loading to deal with changes in position from images loading
+- **Visibility** - Visibility `image` will now wait to lazy load images that are *above* the current screen position, not just below.
+- **All Modules** - Performance logging now delays 500ms instead of 100ms for console logging to ensure all logs are captured in one group
+- **API** - API longer uses `readyState = 0` as sole check for request abort, this may accidentally trigger with `JSONP` or `CORS` requests.
+- **API** - Fixed `loadingDuration` not correctly delaying requests when invoking with  `.api('query')`
+- **Button** - Fixed `attached buttons` 1px offset when attached to segment and menu (border vs box shadow border)
+- **Divider** - Fixed slight offset in `vertical divider` when it automatically adjusts to `horizontal divider` inside a `stackable grid`
+- **Dropdown** - Fixes issue with headers disappearing inside of `ui dropdown` when nested in `ui menu`
+- **Dropdown** - Fixed dropdown `metadata` attribute caching causing issues with React integration
+- **Dropdown** - Fixed border radius on `sub menu` when aligned `left`
+- **Image** - `rounded image` and `circular image` now apply border radius to all child elements, fixing dimmers, and other content rounding
+- **Input** - Fixed improper left padding on `transparent left icon input` **Thanks @zxfwinder**
+- **Input** - Fixed right padding on `labeled input` that were not `corner labeled`
+- **Label** - Labels inside `header` now vertical align better by accounting for line height offset
+- **List** - Added many new variables for link stylings inside list, added separate variables and defaults for child-list spacing
+- **Loader** - Fix position of `inline centered loader` to be centered correctly
+- **Message** - Close icon position adjusted to align with headers
+- **Menu** - Menu now has a `min-height` that matches standard item padding
+- **Modal** - `scrollable modal` now correctly adds padding below modal
+- **Popup** - Popup now correctly adjusts if `data` attributes change
+- **Popup** - Added `addTouchEvents` to specify whether touch events should be added to trigger popup on mobile
+- **Rating** - Rating now correctly adjusts if `data` attributes change
+- **Search** - Search will no longer incorrectly produce an error when API settings are passed through metadata
+- **Search** - Fix `loading search` with an `icon button` causing double loaders.
+- **Search** - `searchFields` setting now correctly replaces default fields instead of adding the user fields to defaults
+- **Steps** - Fixes bug where `ordered steps` had smaller numbers in `IE10`
+- **Sticky** - Fix issues when `pushing: true` with sticky content having incorrect bottom spacing, when container has bottom padding
+- **Table** - `very basic table` now works together with `padded table`
+- **Button** - Button focus color now uses hoverColor background instead of blue box shadow
+- **Breadcrumb** - Fixed breadcrumb `em` rounding, adjusted distance in default theme
+- **Card** - Card styles have been adjusted, `link card` now raise to show selection. Colored variations now have shadows.
+- **Dropdown** - Dropdown padding values now resolve to exact pixel values from em
+- **Grid** - Small computer `page grid` gutters have been adjusted from 8% to 3% to allow for roomier layouts on small screens.
+- **Header/Table/Divider** - These components now pull border color defaults from `site.variables` instead of using their own values
+- **Label** - Padding on `corner label` has been increased
+- **Input** - Input now use `em` instead of `rem` so they will inherit the size of the elements they are nested inside
+- **Menu** - Menu now uses `border` for borders instead of `box-shadow`
+- **Menu** - `secondary pointing menu` has had some slight design tweaks, thinner lines, more padding
+- **Menu** - Menus no longer have additional borders on `active item` in the default theme
+- **Modal** - Modal no longer observes DOM changes by default, added setting to enable
+- **Message** - Slightly increases `box-shadow`
+- **Rating** - Rating styles have been adjusted to use subtle transitions and tweaked color values.
+- **Search** - Slightly adjusted search result theme for clarity
+- **Segment** - Segment now uses `border` for border instead of a second `box-shadow`, this may adjust position by 1pixel
+- **Site** - Additional font variables have been added to site to help clarify variable purpose.
+- **Site** - Page background is now `#FFFFFF` by default instead of an offwhite `#F7F7F7`
+- **Site** - Adjusted global line height to the closest even pixel value
+- **Table** - Table header colors and padding defaults have been slightly adjusted
+- **Table** - Horizontal cell padding has been slightly reduced, and cell borders are slightly lighter.
+
 ### Version 1.12.1 - April 26, 2015
 
 - **Input** - Fixes labeled inputs not adjusting correctly with flex. **Backported from 2.0**
@@ -126,7 +250,7 @@ Added new repositories for css and less only versions, can be installed with
 - **Dropdown** - Javascript Dropdown can now be disabled by adding ``disabled` class. No need to call `destroy`. **Thanks Psyton**
 - **Build** - `Dist/` files now set file permissions in build. `644` by default. Can adjust in `semantic.json` or during gulp install. You will need to run `npm install` to add the new gulp-chmod dependency *Thanks @PeterDaveHello*
 - **Video** - Video component now uses `//` instead of defaulting to `http`
-- **Dropdown** - `restore defaults` will now set placeholder styling and remove active elemenet. Added example in docs.
+- **Dropdown** - `restore defaults` will now set placeholder styling and remove active element. Added example in docs.
 - **Segment** - ``ui tabular menu`` now correctly aligns with attached segment when using fluid variation *Thanks @MohammadYounes*
 - **Segment** - `basic segment` no longer removes padding on first and last elements
 
@@ -288,7 +412,7 @@ Added new repositories for css and less only versions, can be installed with
 ### Version 0.10.3 - Dec 22, 2013
 
 - **Dropdown** - Fixes issue where dropdown animation does not occur sometimes (Thanks MohammadYounes)
-- **Modal** - Fixes element detatching sometimes in case where it is already inside a dimmer
+- **Modal** - Fixes element detaching sometimes in case where it is already inside a dimmer
 
 ### Version 0.10.2 - Dec 13, 2013
 
@@ -303,8 +427,8 @@ Added new repositories for css and less only versions, can be installed with
 
 ### Version 0.9.6 - Dec 04, 2013
 
-- **Rating** - Ratings now recieve class disabled when read only, instead of recieving ``active`` when rateable since active are much more common
-- **Header, Grid, Segment** - Adds justified alignemnt
+- **Rating** - Ratings now receive class disabled when read only, instead of receiving ``active`` when rateable since active are much more common
+- **Header, Grid, Segment** - Adds justified alignment
 
 ### Version 0.9.5 - Nov 25, 2013
 
@@ -350,7 +474,7 @@ Added new repositories for css and less only versions, can be installed with
 
 ### Version 0.7.0 - Oct 22, 2013
 
-- **Table** - Added aweosome new responsive style to ui tables
+- **Table** - Added awesome new responsive style to ui tables
 - **List** - Adds documentation for module format
 - **List** - Adds onTabInit for local tabs on first load
 - **Dimmer** - Adds more dimmer examples, fixes settings
