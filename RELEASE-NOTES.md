@@ -1,3 +1,7 @@
+### Version 2.0.1 - June 30, 2015
+
+- **Dropdown** - `restore defaults` in dropdown when used with multiple will now correctly clear other values selected that were not there on page load.
+
 ### Version 2.0.0 - June 30, 2015
 
 - **Grid** - `page grid` has been deprecated.  `page grids` used percentage gutters which made it unnecessarily difficult to style responsive page content. Moving forward we recommend using `ui container` a fixed width responsive container for holding page contents.
