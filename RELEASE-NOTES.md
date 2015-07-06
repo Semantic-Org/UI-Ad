@@ -1,6 +1,15 @@
 ### Version 2.0.1 - June 30, 2015
 
+- **Label** - Attached labels now use a border-radius for corner-edges that matches more closely [#2500](https://github.com/Semantic-Org/Semantic-UI/issues/2500)
+- **Checkbox** - Fixed issue in chrome where radio checkbox would appear incorrectly when no default value was selected [#2505](https://github.com/Semantic-Org/Semantic-UI/issues/2505)
+- **Checkbox** - Fixed issue where radio checkbox were not properly receiving `checked` class [#2506](https://github.com/Semantic-Org/Semantic-UI/issues/2506)
+
+**Additional Bugs**
+
 - **Dropdown** - `restore defaults` in dropdown when used with multiple will now correctly clear other values selected that were not there on page load.
+- **Tab** - Fixed bug where remote loaded tab content would not show `loading tab` on first load.
+- **Image** - Added docs for missing `fluid image` variation
+- **Tab** - Added new examples for `evaluateScripts` and HTML5 state tabs
 
 ### Version 2.0.0 - June 30, 2015
 
