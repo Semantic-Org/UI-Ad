@@ -1,3 +1,22 @@
+### Version 2.0.7 - July 22, 2015
+
+This release should fix bugs some may have encountered with `npm install semantic-ui` hanging after set-up. See [this thread](https://github.com/Semantic-Org/Semantic-UI/issues/1816) for more details.
+
+- **Dropdown** - Fixed border radius on `circular labeled icon button`  [#2700](https://github.com/Semantic-Org/Semantic-UI/issues/2700)
+- **Recipes** - Add links to Sketch files for SUI. Add example repo on how to import gulp tasks.
+
+**Additional Fixes**
+
+- **Popup** - Fixed terribly typo where popup `onShow` was mistakenly being called instead of `onHide` when hiding popup
+
+### Version 2.0.6 - July 22, 2015
+
+- **Form Validation** - In `2.0.4` `length` rules were corrected to match "exact length" and not "minimum length". This may have caused issues for those who were using this rule as min length previously. We've remedied any breaking changes introduced by by returning `length` to functioning as "minimum length" and added a new rule `exactLenght` for matching exact length. #2681
+- **Dropdown** - Added `set exactly` to remedy confusion of `set selected` not removing current selections with multiple [#2689](https://github.com/Semantic-Org/Semantic-UI/issues/2689)
+- **List**- Fixed issue where using an image variation like `ui image label` as a direct child of an `item` would remove right padding [#2691](https://github.com/Semantic-Org/Semantic-UI/issues/2691)
+
+**Additional Fixes**
+
 ### Version 2.0.5 - July 20, 2015
 
 - **API** - Data replaced in urls, `urlData`, will now be url encoded by default. Additionally checks were added to avoid double encoding already encoded values. [#2394](https://github.com/Semantic-Org/Semantic-UI/issues/2394)
