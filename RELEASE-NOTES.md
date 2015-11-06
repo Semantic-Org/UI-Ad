@@ -1,3 +1,16 @@
+### Version 2.1.5 - Nov 1, 2015
+
+- **Form** - Adds `equal width form` and `equal width fields` for simpler grouped fields
+- **Dropdown** - Added `onLabelRemove` callback that allows value removal to be cancelled by callback **Thanks @goloveychuk**
+- **Table** - Added `selectable` on table cell, allowing for full table-cell links
+- **Popup** Added three new variables for `arrow` background color based on position, top, center or bottom. This makes it easier to use gradient backgrounds with popups and still match arrow colors.
+- **Popup** - Added behaviors `get popup` and `change content` to more easily determine popup from activating element and change text
+- **Sticky** - Fixes bug where sticky would stick at incorrect times when using a different scroll container than `body` and scrollTop is not 0 on page load.
+- **Divider/Step/Modal/AD** - Fixes 1px jump at `@mobileBreakpoint` caused by incorrect edge conditions in media query #3180 **THanks @mdehoog**
+- **Dropdown** - Added `remoteValues` as a possible `field` setting. Allowing users to return API results using arbitrary JSON object groupings. #3080
+- **Dropdown** - Added ability to pass in `keys` as a setting, to avoid issues with languages where comma delimiter may be a different keycode #3016
+- **Header** - Sub headers now force `display: block` #3020
+
 ### Version 2.1.4 - Sep 13, 2015
 
 - **Form Validation** - `identifier` and `prompt` are now optional for all form validation rules. Default prompt values have been added for all rule types, and identifier will now automatically match on the named value for rule if no ID is specified. [#3001](https://github.com/Semantic-Org/Semantic-UI/issues/3001) [#2579](https://github.com/Semantic-Org/Semantic-UI/issues/2579)
