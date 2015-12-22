@@ -1,3 +1,9 @@
+### Version 2.1.7 - Dec 19, 2015
+
+- **Popup** - Adds `onUnplaceable` callback when element cannot be placed in visible screen [#3388](https://github.com/Semantic-Org/Semantic-UI/issues/3388)
+- **Form** - Fixed issue where text would turn transparent inside a `loading form` [#3122](https://github.com/Semantic-Org/Semantic-UI/issues/3122)
+- **Header** - `sub header` used inside a header now correctly forces `block` styling [#3020](https://github.com/Semantic-Org/Semantic-UI/issues/3020)
+
 ### Version 2.1.5 - Nov 1, 2015
 
 - **Form** - Adds `equal width form` and `equal width fields` for simpler grouped fields
