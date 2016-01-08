@@ -1,3 +1,7 @@
+### Version 2.1.8 - Jan 7, 2016
+
+- **Flag** - Adds Scotland and Wales flag [#3494](https://github.com/Semantic-Org/Semantic-UI/issues/3494) **Thanks @edumucelli**
+
 ### Version 2.1.7 - Dec 19, 2015
 
 - **Popup** - Adds `onUnplaceable` callback when element cannot be placed in visible screen [#3388](https://github.com/Semantic-Org/Semantic-UI/issues/3388)
