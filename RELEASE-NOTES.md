@@ -1,3 +1,7 @@
+### Version 2.2.1 - June 27, 2016
+
+- **Dropdown** - Fixed issue where using both `<select>` and `allowAdditions: true` would cause dropdown selection to fail
+
 ### Version 2.2.0 - June 26, 2016
 
 - **All UI** - Added new setting `silent` to all modules which allows you to disable all console output including errors. This can be useful for preventing known errors, like a popup which cannot place itself on screen, or `sticky` content which initializes before it is visible [#3713](https://github.com/Semantic-Org/Semantic-UI/issues/3713)
@@ -10,17 +14,17 @@
 - **Build Tools** - Added new `autoInstall` option to allow for Semantic to be installed without user interaction. See [docs explanation](http://www.semantic-ui.com/introduction/advanced-usage.html[#Auto](https://github.com/Semantic-Org/Semantic-UI/issues/Auto)-Install) for how to use. [#3616](https://github.com/Semantic-Org/Semantic-UI/issues/3616) **Thanks @algorithme**
 - **Dropdown** - Added `fullSearchSearch: 'exact'` setting, which requires exact matches for dropdown values [#3085](https://github.com/Semantic-Org/Semantic-UI/issues/3085) [#3994](https://github.com/Semantic-Org/Semantic-UI/issues/3994) **Thanks @ShawnCholeva**
 - **Dropdown** - Added new setting for search selection `hideAdditions` this will remove showing user additions inside the menu, making for a more intuitive adding process. Dropdowns now have a new state `empty` which will format an active dropdown with empty results. [#3791](https://github.com/Semantic-Org/Semantic-UI/issues/3791)
-- **Dropdown** - Adds new `allowReselection` option to trigger `onChange` events even when reselecting same value 
+- **Dropdown** - Adds new `allowReselection` option to trigger `onChange` events even when reselecting same value
 - **Dropdown** - Adds new setting `minCharacters` which sets the minimum number of characters required to start filtering results [#3886](https://github.com/Semantic-Org/Semantic-UI/issues/3886)
 - **Form Validation** - Added `depends` validation rule setting which will only validate a field if another specified field is not empty
 - **Popup** - Added new setting `boundary` and `scrollContext`. `boundary` lets you specify an element that the popup will try to position itself to be contained inside of. `scrollContext` lets you specify the element which when scrolled should hide the popup
 - **Popup** - Added new settings `observeChanges`, which is enabled by default. This will add special mutation observers to trigger `destroy` when the element is removed from the document, preventing memory leaks.
 - **Progress** - Added `onLabelUpdate` callback, this can be used to specify the exact text that should appear on the actual progress update, perhaps based on some external conditions
 - **Rating** - Added new setting `fireOnInit` for rating, which defaults to `false`. When set to true `onRate` will fire when rating is initialized [#3712](https://github.com/Semantic-Org/Semantic-UI/issues/3712)
-- **Search** - Added a new option `selectFirstResult`, which defaults to `false`. Will automatically highlight first result on search 
+- **Search** - Added a new option `selectFirstResult`, which defaults to `false`. Will automatically highlight first result on search
 - **Tab** - Added new setting `cacheType`, can either be `html` or `response` (default). HTML will cache resulting html after callbacks, `response` will cache the original response so that it can be played back identically on future loads [#2534](https://github.com/Semantic-Org/Semantic-UI/issues/2534)
 - **Tab** - Added new option `deactivate`, defaults to `siblings` which will only deactivate tab activators that are DOM siblings elements to the activating element. Setting it to <code>'all'</code> will deactivate any other tab element initialized at the same time.
-- **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'` 
+- **Visibility** - Added `onFixed` and `onUnfixed` callbacks for visibility `type: 'fixed'`
 - **Visibility** - Added `onLoad` and `onAllLoaded` callback for `type: 'image'` visibility
 - **Visibility** - Added `zIndex` setting for specifying zindex with `type: 'fixed'` [#3370](https://github.com/Semantic-Org/Semantic-UI/issues/3370)
 - **Dropdown** - Added new convenience method `restore placeholder text`
