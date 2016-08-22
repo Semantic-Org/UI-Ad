@@ -1,3 +1,11 @@
+### Version 2.2.3 - August 21, 2016
+
+- **Form Validation** - Bracketed notation can now be omitted for rules, instead passing in bracketed values with the `value` parameter [#3313](https://github.com/Semantic-Org/Semantic-UI/issues/3313)
+- **Comments** - Adds missing sizes (mini, tiny etc) **Thanks @ilanus** [#4408](https://github.com/Semantic-Org/Semantic-UI/issues/4408)
+- **Form/Segment** - Fix typo causing `pointer-events: none` no to work on `loading segment` and `loading form`  **Thanks @YamiOdymel and @ilanus** [#4403](https://github.com/Semantic-Org/Semantic-UI/issues/4403)
+- **Button** - Fixed `vertical buttons` with only 1 button having incorrect border radius **Thanks @Denhai** [#4107](https://github.com/Semantic-Org/Semantic-UI/issues/4107)
+- **Form** - Fixed issue where `disabled fields` with radio inputs would not correctly dim the label **Thanks @louwers** [#4366](https://github.com/Semantic-Org/Semantic-UI/issues/4366)
+
 ### Version 2.2.1 - June 27, 2016
 
 - **Dropdown** - Fixed issue where using both `<select>` and `allowAdditions: true` would cause dropdown selection to fail
