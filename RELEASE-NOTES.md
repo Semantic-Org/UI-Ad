@@ -1,3 +1,13 @@
+### Version 2.2.5 - October, 27, 2016
+
+- **Tab** - Added new tab cache type `DOM` which preserves the final DOM state after scripts rendering. This can be used to avoid re-running returned `<script>` tags on each cached read #2534
+- **Checkbox** - Adds additional variables for styling toggle checkbox on/off state
+-  **Sticky** - Adds `container` setting. This can be used to specify the offsetParent of the sticky element and avoid having to calculate on initialization (improving performance)
+
+### Version 2.2.4 - August 25, 2016
+
+- **Message** - Added additional variables for `@padding`
+
 ### Version 2.2.3 - August 21, 2016
 
 - **Form Validation** - Bracketed notation can now be omitted for rules, instead passing in bracketed values with the `value` parameter [#3313](https://github.com/Semantic-Org/Semantic-UI/issues/3313)
