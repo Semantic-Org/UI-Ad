@@ -1,3 +1,22 @@
+### Version 2.2.11 - July 11, 2017
+
+- **Dropdown** - Fixed issue where using `down` key to re-open dropdown when using `search selection dropdown` would start at the top element instead of jumping to selected element [#4506](https://github.com/Semantic-Org/Semantic-UI/issues/4506)
+- **Form Validation** - Fixed issue where radio was not being included in `onFailure` values if not set [#5064](https://github.com/Semantic-Org/Semantic-UI/issues/5064)
+- **Dropdown** - Dropdowns will automatically detect when they are offscreen to the right and will open leftward instead **Thanks @Graveheart** [#4211](https://github.com/Semantic-Org/Semantic-UI/issues/4211)
+- **Form Validation** - Added `add rule` `add field`, `remove rule`, `remove field` to programmatically and and remove validation rules from form validation [#4267](https://github.com/Semantic-Org/Semantic-UI/issues/4267) [#5253](https://github.com/Semantic-Org/Semantic-UI/issues/5253)
+- **Modal** - Adds new `scrolling content` variation to have a modal with content that scrolls
+- **Reset** - Upgrades to [normalize.css 7.0](https://necolas.github.io/normalize.css/) **Thanks @ivantcholakov** [#4647](https://github.com/Semantic-Org/Semantic-UI/issues/4647)
+- **Modal** - Adds `tiny` and `mini` sized modals **Thanks @Banandrew** [#5123](https://github.com/Semantic-Org/Semantic-UI/issues/5123)
+- **Popup** - Added `bind clickaway` `bind touch close` `bind close on scroll` behaviors to make it easier for `on: 'manual'` popup to specify behavior
+- **Table**- Fix inverted table header color not applying properly to `sortable table` **Thanks @Banandrew** [#5303](https://github.com/Semantic-Org/Semantic-UI/issues/5303)
+- **Dropdown** - Fix `loading dropdown` icon position being slightly offset
+- **Search** - Fixed issue where `searchDelay` could cause results to appear after search had lost focus.
+- **Input** - Fix issue where transparent input had a border radius and could cut off descendors [#5281](https://github.com/Semantic-Org/Semantic-UI/issues/5281)
+- **Popup** - Fixed issue where popup would incorrectly add itself to the wrong offset context when using `popup` and `target` setting together in cases where the `target` has a different `offsetParent` than the activating element.
+- **Dimmer** - Fixed typo causing body dimmer to add unnecessary `position: relative;` **Thanks @jinyangzhen** [#4707](https://github.com/Semantic-Org/Semantic-UI/issues/4707)
+- **Form** - Updated docs to include new examples of adding/removing validation rules
+- **Form Validation** - Added undocumented `add prompt` to list of behaviors
+
 ### Version 2.2.10 - March 28, 2017
 
 - **Button** - Fixes `@basicActiveBoxShadow` being used incorrectly in basic button variables
