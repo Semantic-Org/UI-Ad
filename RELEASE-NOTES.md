@@ -1,3 +1,10 @@
+### Version 2.2.12 - Aug 07, 2017
+
+- **Dropdown** - Dropdown mutation observers now watch to see if the entire `<select>` DOM node is replaced with a different select, and not just if new `<option>` are added
+- **Dropdown** - Calling dropdown methods on `<select>` will now work when using `setting` behavior to set settings after load [#3744](https://github.com/Semantic-Org/Semantic-UI/issues/3744)
+- **Header** - Fixes vertical alignment
+- **Header/List** - Fixes issue where icons appear slightly offset with text due to line-height offset fixes no longer being necessary in modern browsers.
+
 ### Version 2.2.11 - July 11, 2017
 
 - **Dropdown** - Fixed issue where using `down` key to re-open dropdown when using `search selection dropdown` would start at the top element instead of jumping to selected element [#4506](https://github.com/Semantic-Org/Semantic-UI/issues/4506)
