@@ -1,3 +1,10 @@
+### Version 2.2.14 - Jan 29, 2018
+
+- **Form** - Fixes issue where radio checkbox would not return correct value from `get values` **Thanks @tincdev** [#5713](https://github.com/Semantic-Org/Semantic-UI/issues/5713) [#6043](https://github.com/Semantic-Org/Semantic-UI/issues/6043)
+- **Flag** - Adds missing flag for England **Thanks @zyzniewski** [#5944](https://github.com/Semantic-Org/Semantic-UI/issues/5944)
+- **Dropdown** - Added new setting `ignoreCase` (defaults to false) that will prevent values from being added that match existing values (case insensitive). This is particularly useful when using allowAdditions for tagging to not allow case insensitive matches.
+- **Checkbox** - Fixes issue where `toggle checkbox` box shadow was missing **Thanks @banandrew** [#5096](https://github.com/Semantic-Org/Semantic-UI/issues/5096)
+
 ### Version 2.2.12 - Aug 07, 2017
 
 - **Dropdown** - Dropdown mutation observers now watch to see if the entire `<select>` DOM node is replaced with a different select, and not just if new `<option>` are added
