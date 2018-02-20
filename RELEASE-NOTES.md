@@ -1,3 +1,16 @@
+### Version 2.3.0 - Feb 19, 2018
+
+- **Search** - Category search can now work with local search by adding a `category` property to any result and specifying `type: 'category'`
+
+    { category: 'North America', title: 'Canada' },
+
+- **Transition** - Adds new `glow` transition for highlighting an element on the page, and `zoom` animation for scaling elements without opacity tween.
+- **Theming** - Added global variables for reassigning `normal` and `bold` font weights for custom font stacks. **Thanks @jaridmargolin** [#6167](https://github.com/Semantic-Org/Semantic-UI/issues/6167)
+- **Search** - Category results will now responsively adjust `title` row if titles are long instead of forcing a title width
+- **Accordion** - Added `onChanging` callback for accordion that occurs before animation in both directions **Thanks @GammeGames** [#5892](https://github.com/Semantic-Org/Semantic-UI/pull/5892)
+- **Popup** - Adds new variable `headerFontWeight`
+- **Admin** - Fixes bug in admin script that caused leaked global vars **Thanks @esbena** [#6136](https://github.com/Semantic-Org/Semantic-UI/issues/6136)
+
 ### Version 2.2.14 - Jan 29, 2018
 
 - **Form** - Fixes issue where radio checkbox would not return correct value from `get values` **Thanks @tincdev** [#5713](https://github.com/Semantic-Org/Semantic-UI/issues/5713) [#6043](https://github.com/Semantic-Org/Semantic-UI/issues/6043)
