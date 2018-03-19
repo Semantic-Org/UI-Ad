@@ -1,4 +1,12 @@
-### Version 2.3.0 - Feb 19, 2018
+### Version 2.3.1 - Mar 19, 2018
+
+- **Dropdown** - Fixed issue in `2.3.0` that could cause multiselect dropdowns initialized by converting `<select>` to not add initial selected options. [#6123](https://github.com/Semantic-Org/Semantic-UI/issues/6123)
+- **Search** - Adds disabled variation **Thanks @prudho** [#6225](https://github.com/Semantic-Org/Semantic-UI/issues/6225)
+- **Icons** - Added ability to choose whether solid, outline and brand icons should be included in your theme via the `@importSolidIcons`, `importRegularIcons` and `@importBrandIcons` variables **Thanks hammy2899**
+- **CSS Variables** - Added use of `@normal` for normal font weight for all non-default themes included in repo. [#6227](https://github.com/Semantic-Org/Semantic-UI/issues/6227)
+- Fixed issue where iframes may not load correctly in `/examples/theming.html` #6269
+
+### Version 2.3.0 - Feb 20, 2018
 
 - **Search** - Category search can now work with local search by adding a `category` property to any result and specifying `type: 'category'`
 
