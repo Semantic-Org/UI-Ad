@@ -1,4 +1,10 @@
-### Version 2.3.1 - Mar 19, 2018
+### Version 2.3.2 - June 18, 2018
+
+- **Button** - Add `inverted` and `inverted basic` variations for `primary` and `secondary` buttons  **Thanks @hammy2899** [#6242](https://github.com/Semantic-Org/Semantic-UI/issues/6242)
+- **Global** - Add `hover` `down` `active` and `focus` variables for `@invertedPrimaryColor` and `@invertedSecondaryColor`
+- **Modal** - Modal will not refocus a field if field is already focused **Thanks @nikolaybobrovskiy** [#6301](https://github.com/Semantic-Org/Semantic-UI/issues/6301)
+
+### Version 2.3.1 - Mar 18, 2018
 
 - **Dropdown** - Fixed issue in `2.3.0` that could cause multiselect dropdowns initialized by converting `<select>` to not add initial selected options. [#6123](https://github.com/Semantic-Org/Semantic-UI/issues/6123)
 - **Search** - Adds disabled variation **Thanks @prudho** [#6225](https://github.com/Semantic-Org/Semantic-UI/issues/6225)
