@@ -1,3 +1,12 @@
+### Version 2.4.0 - Sep 17, 2018
+
+> `2.4.0` includes a new component `placeholder`. To use this component in your existing SUI site, be sure to add `@placeholder: 'default';` to your `theme.config`. You can see an example in `theme.config.example`
+
+- **Placeholder** - Added `ui placeholder` that can be used to show where content will soon appear.
+- **Segment** - Added new `ui placeholder segment` used to reserve space for UI when content is missing or empty.
+- **Dropdown** - Added `clearable` dropdowns. When `clearable: true` is specified an (X) will appear to clear dropdown selection [#2072](https://github.com/Semantic-Org/Semantic-UI/issues/2072)
+- **Flag** - Add `uk` alias for `united kingdom` **Thanks @PhilipGarnero** [#6531](https://github.com/Semantic-Org/Semantic-UI/issues/6531)
+
 ### Version 2.3.2 - June 18, 2018
 
 - **Button** - Add `inverted` and `inverted basic` variations for `primary` and `secondary` buttons  **Thanks @hammy2899** [#6242](https://github.com/Semantic-Org/Semantic-UI/issues/6242)
