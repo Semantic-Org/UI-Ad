@@ -1,3 +1,9 @@
+### Version 2.4.1 - Oct 13, 2018
+
+> If you are using the `semantic-ui-less` package with versions of LESS before 3.5 some `calc` values will not be computed correctly due to changes in variable interpolation. It is recommended that you upgrade to at least 3.5 to continue using new versions of SUI. For more information see [#6512](https://github.com/Semantic-Org/Semantic-UI/issues/6512)
+
+- **Embed** - Embed will now correctly remove DOM metadata on `destroy`
+
 ### Version 2.4.0 - Sep 17, 2018
 
 > `2.4.0` includes a new component `placeholder`. To use this component in your existing SUI site, be sure to add `@placeholder: 'default';` to your `theme.config`. You can see an example in `theme.config.example`
