@@ -1,3 +1,9 @@
+### Version 2.5.0 - Oct 6, 2022
+
+- **Meteor** - Fix issue with misuse of `api.addAssets` #6790 **Thanks @gimco**
+- **Sticky** - Adds new example for sticky to highlight behavior when sticky/context height varies
+- **Button** - Fix usage of loading on in labeled button #7023 thanks @flppv
+
 ### Version 2.4.1 - Oct 13, 2018
 
 > If you are using the `semantic-ui-less` package with versions of LESS before 3.5 some `calc` values will not be computed correctly due to changes in variable interpolation. It is recommended that you upgrade to at least 3.5 to continue using new versions of SUI. For more information see [#6512](https://github.com/Semantic-Org/Semantic-UI/issues/6512)
